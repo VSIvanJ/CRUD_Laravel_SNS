@@ -20,10 +20,6 @@ class AlumnoController extends Controller
         $sns = new SnsClient([
             'region' => env('AWS_DEFAULT_REGION'),
             'version' => 'latest',
-            'credentials' => [
-                'key' => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            ]
         ]);
 
         $sns->publish([
@@ -48,10 +44,6 @@ class AlumnoController extends Controller
         $sns = new SnsClient([
             'region' => env('AWS_DEFAULT_REGION'),
             'version' => 'latest',
-            'credentials' => [
-                'key' => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            ]
         ]);
 
         $sns->publish([
@@ -71,10 +63,6 @@ class AlumnoController extends Controller
         $sns = new SnsClient([
             'region' => env('AWS_DEFAULT_REGION'),
             'version' => 'latest',
-            'credentials' => [
-                'key' => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            ]
         ]);
 
         $sns->publish([
