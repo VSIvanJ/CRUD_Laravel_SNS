@@ -1,28 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\TramiteController;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('Tramites.Inicio');
+})->name('Tramites.Inicio');
 
 Route::get('/registro', function () {
-    return view('Alumnos.registrar');
-})->name('Alumnos.registrar');
+    return view('Tramites.registrar');
+})->name('Tramites.registrar');
 
-Route::get('/actualizar', function () {
-    return view('Alumnos.actualizar');
-})->name('Alumnos.actualizar');
+Route::get('/consulta', function () {
+    return view('Tramites.consulta');
+})->name('Tramites.consulta');
 
-Route::get('/eliminar', function () {
-    return view('Alumnos.eliminar');
-})->name('Alumnos.eliminar');
+// Registrar trámite
+Route::post('/registro', [TramiteController::class, 'registroTramite'])->name('regT');
 
-Route::get('/lista', [AlumnoController::class, 'listaAlumnos'])->name('Alumnos.lista');
-
-Route::post('/registro', [AlumnoController::class, 'registroAlumno'])->name('regA');
-
-Route::post('/actualizar', [AlumnoController::class, 'actualizarAlumno'])->name('actA');
-
-Route::post('/eliminar', [AlumnoController::class, 'eliminarAlumno'])->name('eliA');
+// Consultar trámite
+Route::post('/consulta', [TramiteController::class, 'consultaTramite'])->name('conT');
