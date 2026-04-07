@@ -13,7 +13,7 @@
         <hr>
         <p><strong>ID:</strong> {{ $pedido->id_pedido }}</p>
         <p><strong>Nombre del Menú:</strong> {{ $pedido->menu->nombre }}</p>
-        <p><strong>Precio:</strong> ${{ $pedido->precio }}</p>
+        <p><strong>Precio:</strong> S/.{{ $pedido->menu->precio }}</p>
     @endforeach
     <br><br>
     <footer>
